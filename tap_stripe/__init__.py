@@ -11,7 +11,7 @@ from singer import (transform,
 import stripe
 import json
 
-REQUIRED_CONFIG_KEYS = ["start_date", "api_key"]
+REQUIRED_CONFIG_KEYS = ["start_date", "access_token"]
 LOGGER = singer.get_logger()
 STREAM_ENDPOINTS = {
     'customers': stripe.Customer,
@@ -158,7 +158,7 @@ def main():
     # Parse command line arguments
     args = utils.parse_args(REQUIRED_CONFIG_KEYS)
 
-    stripe.api_key = args.config['api_key']
+    stripe.api_key = args.config['access_token']
     stripe.default_http_client = stripe.http_client.RequestsClient()
 
     # If discover flag was passed, run discovery mode and dump output to stdout
