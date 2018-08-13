@@ -144,110 +144,119 @@
         "array"
       ],
       "items": {
-        "id": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "object": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "amount": {
-          "type": [
-            "null",
-            "integer"
-          ]
-        },
-        "currency": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "description": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "discountable": {
-          "type": [
-            "null",
-            "boolean"
-          ]
-        },
-        "livemode": {
-          "type": [
-            "null",
-            "boolean"
-          ]
-        },
-        "metadata": {
-          "type": [
-            "null",
-            "object"
-          ],
-          "additionalProperties": true,
-          "properties": {}
-        },
-        "period": {
-          "type": [
-            "null",
-            "object"
-          ],
-          "properties": {
-            "end": {
-              "type": [
-                "null",
-                "string"
-              ],
-              "format": "date-time"
-            },
-            "start": {
-              "type": [
-                "null",
-                "string"
-              ],
-              "format": "date-time"
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "object": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "invoice_item": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "amount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "discountable": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "livemode": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "metadata": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "additionalProperties": true,
+            "properties": {}
+          },
+          "period": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "end": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "format": "date-time"
+              },
+              "start": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "format": "date-time"
+              }
             }
+          },
+          "plan": {
+            "$ref": "plan.json"
+          },
+          "proration": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "quantity": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "subscription": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "subscription_item": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
-        },
-        "plan": {
-          "$ref": "plan.json"
-        },
-        "proration": {
-          "type": [
-            "null",
-            "boolean"
-          ]
-        },
-        "quantity": {
-          "type": [
-            "null",
-            "integer"
-          ]
-        },
-        "subscription": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "subscription_item": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "type": {
-          "type": [
-            "null",
-            "string"
-          ]
         }
       }
     },
