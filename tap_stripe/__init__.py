@@ -145,7 +145,10 @@ def sync(config, state, catalog):
         if stream_id in selected_stream_ids:
             # TODO: sync code for stream goes here...
             LOGGER.info('Syncing stream: ' + stream_id)
-            sync_stream(stream_id, stream_schema)
+            if stream_id == 'subscriptions':
+                sync_stream(stream_id, stream_schema, status='all')
+            else:
+                sync_stream(stream_id, stream_schema)
 
     return
 
