@@ -79,6 +79,12 @@
         "number"
       ]
     },
+    "percent_off_precise": {
+      "type": [
+        "null",
+        "number"
+      ]
+    },
     "redeem_by": {
       "type": [
         "null",
