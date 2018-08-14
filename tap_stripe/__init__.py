@@ -117,6 +117,7 @@ def sync_stream(stream, schema, **params):
     starting_after = None
     has_more = True
     while has_more:
+        LOGGER.info('Loading data for stream {} after {}'.format(stream, starting_after))
         result = endpoint.list(
             starting_after=starting_after,
             limit=100,
