@@ -106,9 +106,11 @@ def get_selected_streams(catalog):
 def replace_data_array(obj):
     for key, value in obj.items():
         if isinstance(value, dict) and value.get('object') == 'list':
-            for nested in value['data']:
+            result = []
+            for nested in value.auto_paging_iter():
                 replace_data_array(nested)
-            obj[key] = value['data']
+                result.append(nested)
+            obj[key] = result
 
 
 def sync_stream(stream, schema, **params):
