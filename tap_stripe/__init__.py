@@ -126,7 +126,8 @@ def sync_stream(stream, schema, **params):
             **params
         )
         has_more = result['has_more']
-        starting_after = result.data[-1].id
+        if has_more:
+            starting_after = result.data[-1].id
         for obj in result.data:
             replace_data_array(obj)
 
